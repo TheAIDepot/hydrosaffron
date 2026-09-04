@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saffron Container Farm: Business Model & Operational Guide</title>
-    <style>
-        :root {
-            --primary: #5c1d42;
-            --secondary: #d4af37;
-            --accent: #e63946;
-            --dark: #1d3557;
-            --light: #f8f9fa;
-            --gray: #e9ecef;
-        }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: var(--light);
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--dark));
             color: white;
             padding: 3rem 1.5rem;
             text-align: center;
@@ -88,7 +62,6 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Image Placeholder Style */
         .image-placeholder {
             background-color: var(--gray);
             border: 2px dashed #ccc;
@@ -104,7 +77,6 @@
             padding: 1rem;
         }
 
-        /* Timeline Style */
         .timeline {
             position: relative;
             max-width: 800px;
@@ -160,6 +132,7 @@
             font-weight: bold;
             border-radius: 4px;
             color: white;
+            margin-right: 0.25rem;
         }
 
         .badge-temp { background-color: #0077b6; }
@@ -175,9 +148,14 @@
             margin-top: 2rem;
         }
         
-        .calc-box h2 {
+        .calc-box h2, .calc-box h3 {
             color: var(--secondary);
-            border-bottom-color: rgba(255,255,255,0.1);
+        }
+
+        .calc-section {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .form-group {
@@ -188,6 +166,7 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: bold;
+            font-size: 0.95rem;
         }
 
         .form-group input, .form-group select {
@@ -202,14 +181,15 @@
         .btn {
             background-color: var(--secondary);
             color: var(--dark);
-            padding: 0.75rem 1.5rem;
+            padding: 1rem 1.5rem;
             border: none;
             border-radius: 4px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: bold;
             cursor: pointer;
             width: 100%;
             transition: background-color 0.2s;
+            margin-top: 1rem;
         }
 
         .btn:hover {
@@ -218,9 +198,10 @@
 
         .results {
             margin-top: 1.5rem;
-            background: rgba(255,255,255,0.1);
-            padding: 1rem;
-            border-radius: 4px;
+            background: rgba(255,255,255,0.08);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.15);
         }
 
         .result-line {
@@ -252,7 +233,6 @@
             </div>
             <div class="card accent">
                 <h3>Container Spatial Layout Blueprint</h3>
-                <!-- PHOTO PLACEHOLDER: Replace src attribute below with your real layout photo -->
                 <div class="image-placeholder">
                     <img src="" alt="" style="display:none;" id="img-layout">
                     <div>
@@ -277,18 +257,15 @@
                 </ul>
             </div>
             <div class="card">
-                <h3>Annual Operating Cost (OPEX)</h3>
+                <h3>Fixed Base Operating Cost (OPEX)</h3>
                 <ul>
-                    <li>Florida Electrical Costs (HVAC + LED): $4,500</li>
-                    <li>Water, RO Filtration & Nutrients: $1,000</li>
-                    <li>Harvest Peak Labor (Stigma picking): $4,500</li>
-                    <li>Consumables & Miscellaneous: $1,000</li>
-                    <li><strong>Total Operational Overhead: ~$11,000</strong></li>
+                    <li>Water, RO Filtration & Nutrients: $1,000 / year</li>
+                    <li>Consumables, Substrates & Packaging: $1,000 / year</li>
+                    <li><em>Note: Utility and Labor variables are calculated interactively below using localized inputs.</em></li>
                 </ul>
             </div>
         </div>
 
-        <!-- PHOTO PLACEHOLDER: Saffron Flower Harvesting Image -->
         <div class="image-placeholder" style="height: 180px;">
             <div>
                 <strong>[Saffron Crocus Flower & Stigma Extraction Image]</strong><br>
@@ -311,4 +288,3 @@
             </div>
 
             <div class="timeline-item" onclick="showPhaseDetails(2)">
-Phase 2: Thermal Shock / Flowering Trigger (Month 4)Temp: 50°F–59°F (10°C–15°C)Lights: Low (8 hours)Humidity: 80%Mimics autumn arrival. Temperatures are rapidly dropped to trigger corm sprouting. Introduce light nutrients to the root zone via automated timers.Phase 3: The Harvest Bloom Window (Weeks 17–20)Temp: 53°F (12°C) MaxLights: Standard (11 hours)Humidity: 65%The flowers bloom aggressively over a 3-week span. Flowers must be hand-picked daily at dawn before light cycles degrade the delicate compounds. Stigmas are separated and immediately dried.Phase 4: Leaf Vegetative Growth & Corm Division (Months 6–12)Temp: 64°F (18°C)Lights: High (14 hours)Humidity: 60%The post-harvest phase. Corms sprout long green leaves to photosynthesize energy. Roots receive robust hydroponic nutrient blends. The mother corm multiplies into 2–3 new daughter corms for next year's crop.📈 4. Live Interactive Revenue CalculatorForecast Your Container PerformanceNumber of Saffron Corms:Target Retail Price per Gram ($):Harvest Cycles Per Year:1 (Single Annual Harvest)2 (Staggered Batches)3 (Tri-Annual Staging)4 (Advanced Staggered Staging) Run ProjectionsEstimated Dried Saffron Weight: 453 grams (1.00 lbs)Annual Spice Gross Income: $13,590Byproduct Gross Value (Petals + Corm Multiplication): $17,500Total Projected Annual Revenue: $31,090// Interactivity for showing details on the timelinefunction showPhaseDetails(phaseId) {const el = document.getElementById(details-${phaseId});if (el.style.display === "none") {el.style.display = "block";} else {el.style.display = "none";}}// Live calculator logic using the standard saffron yield ratiosfunction calculateRevenue() {const corms = parseFloat(document.getElementById('cormCount').value) || 0;const price = parseFloat(document.getElementById('pricePerGram').value) || 0;const cycles = parseInt(document.getElementById('staggerCycles').value) || 1;// Calculations based on 75,000 corms yielding ~453 grams of dried spiceconst gramsPerCorm = 453 / 75000;const totalGramsPerCycle = corms * gramsPerCorm;const totalGramsAnnual = totalGramsPerCycle * cycles;const lbsAnnual = totalGramsAnnual / 453.592;// Financial outputsconst spiceRevenue = totalGramsAnnual * price;// Byproduct assumptions scaled proportionally to corm volumeconst petalRevenue = (corms / 75000) * 2500 * cycles;const cormAssetValue = (corms / 75000) * 15000 * cycles;const totalByproduct = petalRevenue + cormAssetValue;const totalRevenue = spiceRevenue + totalByproduct;// Render output linesdocument.getElementById('weightResult').innerHTML = ${Math.round(totalGramsAnnual).toLocaleString()} grams (${lbsAnnual.toFixed(2)} lbs) / year;document.getElementById('spiceGross').innerHTML = $${Math.round(spiceRevenue).toLocaleString()};document.getElementById('byproductGross').innerHTML = $${Math.round(totalByproduct).toLocaleString()};document.getElementById('totalGross').innerHTML = $${Math.round(totalRevenue).toLocaleString()};}// Initial run on loadwindow.onload = calculateRevenue
