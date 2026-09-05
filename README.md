@@ -52,4 +52,6 @@ The embedded logic leverages standard industry-validated agricultural data for i
 ---
 
 ## 📜 License
-This project is open-source and available under the [MIT License](LICENSE). Feel free to fork, customize, and adapt the math engine for your specific indoor farming ventures.
+
+This project is open-source and available under the **GNU General Public License v3.0 (GPL-3.0)**. Anyone can fork, modify, and distribute this software, provided all modifications are also kept open-source under the same license terms. See the `LICENSE` file for details.
+
